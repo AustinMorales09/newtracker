@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "client": "cd client && npm start",
-    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
